@@ -21,6 +21,11 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
-    "paths": {}
+    "paths": {
+      "@app/websocket-gateway": ["apps/websocket-gateway/src"],
+      "@app/user-service": ["apps/user-service/src"],
+      "@app/message-service": ["apps/message-service/src"],
+      "@app/notification-service": ["apps/notification-service/src"]
+    }
   }
 }

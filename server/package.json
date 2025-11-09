@@ -29,15 +29,14 @@
     "@nestjs/platform-socket.io": "^11.1.8",
     "@nestjs/websockets": "^11.1.8",
     "apollo-server-express": "^3.13.0",
+    "aws-cdk-lib": "^2.222.0",
+    "constructs": "^10.4.3",
     "graphql": "^16.12.0",
+    "kafkajs": "^2.2.4",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "@aws-cdk/aws-apigateway": "^1.203.0",
-    "@aws-cdk/aws-dynamodb": "^1.203.0",
-    "@aws-cdk/aws-lambda": "^1.203.0",
-    "@aws-cdk/core": "^1.203.0",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
     "@nestjs/cli": "^11.0.0",
