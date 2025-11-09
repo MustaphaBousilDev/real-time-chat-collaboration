@@ -54,3 +54,24 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+
+# AWS credentials
+.aws/credentials
+.aws/config
+
+# Environment variables
+.env
+
+# CDK output files
+cdk.out/
+
+# Compiled files and build artifacts
+dist/
+
+# Log files
+*.log
+
+# IDE-specific files
+.vscode/
+.idea/
