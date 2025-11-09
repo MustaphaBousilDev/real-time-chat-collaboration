@@ -1,8 +1,59 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/server/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/server/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/server",
+  "projects": {
+    "message-service": {
+      "type": "application",
+      "root": "apps/message-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/message-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/message-service/tsconfig.app.json"
+      }
+    },
+    "notification-service": {
+      "type": "application",
+      "root": "apps/notification-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification-service/tsconfig.app.json"
+      }
+    },
+    "server": {
+      "type": "application",
+      "root": "apps/server",
+      "entryFile": "main",
+      "sourceRoot": "apps/server/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/server/tsconfig.app.json"
+      }
+    },
+    "user-service": {
+      "type": "application",
+      "root": "apps/user-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-service/tsconfig.app.json"
+      }
+    },
+    "websocket-gateway": {
+      "type": "application",
+      "root": "apps/websocket-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/websocket-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/websocket-gateway/tsconfig.app.json"
+      }
+    }
   }
 }
