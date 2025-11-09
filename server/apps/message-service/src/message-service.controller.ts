@@ -1,12 +1,17 @@
-import { Controller, Get } from '@nestjs/common';
-import { MessageServiceService } from './message-service.service';
+import { Controller, Post, Body, Get, Param } from '@nestjs/common';
+import { MessageService } from './message-service.service';
 
-@Controller()
-export class MessageServiceController {
-  constructor(private readonly messageServiceService: MessageServiceService) {}
+@Controller('messages')
+export class MessageController {
+  constructor(private readonly messageService: MessageService) {}
 
-  @Get()
-  getHello(): string {
-    return this.messageServiceService.getHello();
+  @Post()
+  createMessage(@Body() messageData: any) {
+    return this.messageService.createMessage(messageData);
+  }
+
+  @Get(':id')
+  getMessageById(@Param('id') messageId: string) {
+    return this.messageService.getMessageById(messageId);
   }
 }
