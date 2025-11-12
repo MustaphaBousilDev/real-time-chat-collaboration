@@ -1,0 +1,19 @@
+<div class="app-container">
+  <header>
+    <h1>🚀 Angular Microfrontend Architecture</h1>
+    <p>Host Application with Module Federation</p>
+  </header>
+
+  <nav>
+    <a routerLink="/home" routerLinkActive="active">🏠 Host Home</a>
+    <a routerLink="/remote" routerLinkActive="active">🔵 Remote Microfrontend</a>
+  </nav>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <p>Host: http://localhost:4200 | Remote: http://localhost:4201</p>
+  </footer>
+</div>

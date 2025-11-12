@@ -1,0 +1,25 @@
+<div class="host-container">
+  <h2>🟢 Host Application (Home)</h2>
+  <p>This is the main host application running on Port 4200</p>
+
+  <div class="message-section">
+    <h3>Communication Panel</h3>
+
+    <div class="message-display">
+      <strong>Last Message Received:</strong>
+      <p class="message-box">{{ messageFromRemote }}</p>
+    </div>
+
+    <div class="message-input">
+      <label for="message">Send Message to Remote:</label>
+      <input
+        type="text"
+        id="message"
+        [(ngModel)]="messageToRemote"
+        placeholder="Type your message"
+        (keyup.enter)="sendMessageToRemote()"
+      />
+      <button (click)="sendMessageToRemote()">Send to Remote</button>
+    </div>
+  </div>
+</div>
